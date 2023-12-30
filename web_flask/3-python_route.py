@@ -27,12 +27,9 @@ def txt(text):
 
 
 @app.route('/python/<text>', strict_slashes=False)
-def pytxt(text):
+def pytxt(text='is cool'):
     """return the content of a text or 'is cool' if text is null"""
-    if text is None:
-        return "Python is cool"
-    else:
-        return "Python " + text.replace('_', ' ')
+    return "Python " + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
