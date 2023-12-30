@@ -26,14 +26,12 @@ def txt(text):
     return 'C ' + text.replace('_', ' ')
 
 
-@app.route('/python', strict_slashes=False)
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def pytxt(text):
-    """return the content of a text or 'is cool' if text is null"""
-    if text is None:
-        return 'Python is cool'
-    else:
-        return 'Python ' + text.replace('_', ' ')
+def pytxt(text='is cool'):
+    """return the content of a text or 'is cool' if text is none"""
+    text = text.replace('_', ' ')
+    return f"Python {text}"
 
 
 if __name__ == '__main__':
