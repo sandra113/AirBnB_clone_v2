@@ -41,6 +41,7 @@ def isnumber(n):
         n = int(n)
         return f"{n} is a number"
     except ValueError:
+        return f"{n} is not a valid number"
 
 
 if __name__ == '__main__':
