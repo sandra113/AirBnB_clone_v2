@@ -37,11 +37,7 @@ def pytxt(text='is cool'):
 @app.route('/number/<n>', strict_slashes=False)
 def isnumber(n):
     """displays n is a number only if n is an integer"""
-    try:
-        n = int(n)
-        return f"{n} is a number"
-    except ValueError:
-        return f"{n} is not a valid number"
+    return "{:d} is a number".format(n)
 
 
 if __name__ == '__main__':
