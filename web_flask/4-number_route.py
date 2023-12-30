@@ -34,10 +34,10 @@ def pytxt(text='is cool'):
     return f"Python {text}"
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def isnumber(n):
     """displays n is a number only if n is an integer"""
-    return "{:d} is a number".format(n)
+    return f"{n} is a number"
 
 
 if __name__ == '__main__':
